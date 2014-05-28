@@ -1,0 +1,78 @@
+ private int mainMenu()
+		     {
+		         StdOut.println("Staff management Menu " + "\n");
+		         StdOut.println("--------------" + "\n");
+		         StdOut.println("STAFF" + "\n");
+		         StdOut.println("--------------" + "\n");
+		         StdOut.println("1) Add staff member" + "\n" + "2) List staff members" + "\n" + "3) Edit staff member" + "\n" + "4) Delete a staff member" + "\n")	;    	
+		         StdOut.println("--------------" + "\n");
+		         StdOut.println("DEPARTMENT" + "\n");
+		         StdOut.println("--------------" + "\n");
+	             StdOut.println( "5) Add a department" + "\n" + "6) List all departments" + "\n" + "7) list department staff" + "\n" + "8) Edit department contents" + "\n" + "9) Delete a department" + "\n");
+		    	 StdOut.println("--------------");
+		    	 StdOut.println("REPORTS" + "\n");
+		    	 StdOut.println("--------------");
+		    	 StdOut.println("10) List all departments that have more then 5 staff members" + "\n" + "11) List all the academic departments (ie: those with at least one academic staff members" + "\n");
+		    	 StdOut.println("--------------");
+		    	 StdOut.println("SAVE AND LOAD" + "\n");
+		    	 StdOut.println("--------------");
+		    	 StdOut.println("12) Save staff member details only" + "\n" + "13) Load staff members details only" + "\n"	 + "0) Exit");
+		    	 int option= StdIn.readInt();
+		    	 return option;
+
+		      } 
+
+	/* run() - This method displays the menu and processes the user's menu 
+	* choice and loops until the user enters the option 0 to exit the program.  
+	*/
+	public void run()
+	{
+		int option= mainMenu();
+		while (option!=0) 
+			while (option!=0) 
+			{
+				switch(option)
+				{
+				case 1 :
+					addStaff();	    	       
+					break;
+				case 2 :
+					listStaff();
+					break;
+				case 3 :
+					editStaffMember();
+					break;
+				case 4 :
+					deleteStaffMember();
+					break;
+				case 5 :
+					addDepartment();
+					break;
+				case 6 :
+					listDepartments();
+					break;
+				case 7 :
+					listDepartmentContents();
+					break;
+				case 8 :
+					editDepartment();
+					break;
+				case 9 :
+					deleteDepartment();
+					break;
+				case 10 :
+					listBigDepartments();
+					break;
+				case 11 :
+					listAcademicDepartments();
+					break;
+				default:
+					break;
+				}
+				option=mainMenu();
+
+			}
+		StdOut.println("Exiting... bye");
+	}
+
+}
